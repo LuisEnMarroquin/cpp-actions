@@ -1,0 +1,7 @@
+*.exe
+*.backup*
+*.dev
+*.layout
+*.o
+*.win
+salida.txt
