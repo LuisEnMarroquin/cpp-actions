@@ -1,6 +1,10 @@
 ## Windows Setup
 
 * Install [MinGW Installation Manager](http://www.mingw.org/wiki/Getting_Started)
+* Choose install location: `C:\MinGW`
+
+* Go to: Edit the system environment variables
+* Add to System => Path: `C:\MinGW\bin\`
 
 * Open MinGW and install the following packages in `Basic Setup`
 1. mingw32-base-bin
