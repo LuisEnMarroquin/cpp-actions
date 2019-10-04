@@ -22,7 +22,8 @@ docker run --rm -it cpp
 
 ## Compile
 ```shell
-g++ $fileName
+gcc $fileName # c
+g++ $fileName # c++
 ```
 
 ## Run

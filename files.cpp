@@ -17,5 +17,3 @@ int main(int argc, char *argv[]){
 	salidaArch.close();
 	return EXIT_SUCCESS;
 }
-
-

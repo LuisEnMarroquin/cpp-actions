@@ -6,11 +6,11 @@ using namespace std;
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
 int main(int argc, char** argv) {
-	
+
 	int dia, mes;
 	cout << "Escriba su dia de nacimiento: "; cin >> dia;
 	cout << "Escriba el numero de su mes de nacimiento (Enero = 1, Febrero = 2, etc.): "; cin >> mes;
-	
+
 	switch(mes){
 		case 1: cout << "Enero\n";
 			if (dia < 21) { cout << "Capricornio\n"; } else { cout << "Acuario\n"; }
@@ -50,7 +50,7 @@ int main(int argc, char** argv) {
 			break;
 		default: cout << "No ha elegido un mes valido\n";
 	}
-	
+
 	system("PAUSE");
 	return EXIT_SUCCESS;
 }

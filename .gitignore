@@ -5,3 +5,6 @@
 *.o
 *.win
 salida.txt
+.DS_Store
+.directory
+desktop.ini

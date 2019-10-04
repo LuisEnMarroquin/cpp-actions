@@ -1,3 +1,21 @@
 {
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
+  "files.trimFinalNewlines": true,
+  "files.insertFinalNewline": true,
+  "editor.detectIndentation": false,
+  "files.trimTrailingWhitespace": true,
+  "search.exclude": {
+    "**/yarn.lock": true,
+    "**/package-lock.json": true
+  },
+  "files.exclude": {
+    "**/*.exe": true,
+    "**/*.rap": true,
+    "**/.DS_Store": true,
+    "**/.directory": true,
+    "**/desktop.ini": true
+  },
+  "files.associations": {
+    "iostream": "cpp"
+  }
 }

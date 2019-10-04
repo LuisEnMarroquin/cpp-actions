@@ -19,10 +19,10 @@ using namespace std;
 * - Texto de todas las propiedades de cada usuario más su ahorro total
 */
 int main(int argc, char *argv[]){
-	
+
  int num = 5; // Number of employees
  string array [num]; // Array to save data
- 
+
  for (int i = 1; i <= num; ++i) {
   // Variables
   string nombre, sexo, edad, telefono;
@@ -48,12 +48,12 @@ int main(int argc, char *argv[]){
   // Add to array
   array[i-1] = " - " + nombre + " de sexo " + sexo + " tiene " + edad + " a�os de edad, su telefono es " + telefono + " y ha ahorrado " + out_string + " durante estos 4 meses.";
  }
- 
+
  for (int i = 1; i <= num; ++i) {
   string print = array[i-1];
   cout << print << endl;
  }
- 
+
  system("PAUSE");
  return EXIT_SUCCESS;
 }

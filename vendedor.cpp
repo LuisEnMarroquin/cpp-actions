@@ -12,7 +12,7 @@ int menorIgual1000(double pCalifs[][5]);
 
 int main(int argc, char *argv[]){
 
-	double califs[4][5] = { 
+	double califs[4][5] = {
 		{3500, 550, 4000, 0, 4800},	// Vendedor 1
 		{1000, 7500, 2500, 320, 5400}, // Vendedor 2
 		{6000, 3480, 100, 2000, 230}, // Vendedor 3
@@ -42,7 +42,7 @@ int vendedorConMasVentas(double pCalifs[][5]){
 			cout << pCalifs[i][j] << " ";
 			sumCalxAlum = sumCalxAlum + pCalifs[i][j]; // Acumula/Suma ventas
 		}
-		if (i==0) {							
+		if (i==0) {
 			mayorAcumCalif = sumCalxAlum; // Si es el primer vendedor entonces mayorAcumCalif almacenara el primer acumulado porque es el mayor hasta el momento
 			numAlumMayorCalif = i; // hasta este momento el primer vendedor tiene el mayor acumulado
 		} else {
@@ -67,11 +67,11 @@ int vendedorConMenosVentas(double pCalifs[][5]){
 			cout << pCalifs[i][j] << " ";
 			sumCalxAlum = sumCalxAlum + pCalifs[i][j];
 		}
-		if (i==0) {							
+		if (i==0) {
 			mayorAcumCalif = sumCalxAlum;
 			numAlumMayorCalif = i;
 		} else {
-			if (mayorAcumCalif > sumCalxAlum) { 
+			if (mayorAcumCalif > sumCalxAlum) {
 				mayorAcumCalif = sumCalxAlum;
 				numAlumMayorCalif = i + 1;
 			}
@@ -94,7 +94,7 @@ int mesConMenosVentas(double pCalifs[][5]){
 		}
 		if (j==0) {
 			menorAcumMat = sumCalxMat;
-			numMatMenorCalif = j;						 
+			numMatMenorCalif = j;
 		} else {
 			if (sumCalxMat < menorAcumMat){
 				menorAcumMat = sumCalxMat;
@@ -103,7 +103,7 @@ int mesConMenosVentas(double pCalifs[][5]){
 		}
 		cout << endl<< "Sumatoria: " << sumCalxMat<<endl;
 	}
-	return numMatMenorCalif;	
+	return numMatMenorCalif;
 }
 
 int mesConMasVentas(double pCalifs[][5]){
@@ -119,7 +119,7 @@ int mesConMasVentas(double pCalifs[][5]){
 		}
 		if (j==0) { // Si es la primer materia entonces mayorAcumCalif almacenara el primer acumulado porque es el mayor hasta el momento
 			menorAcumMat = sumCalxMat; // hasta este momento la primer materia tiene el menor acumulado
-			numMatMenorCalif = j;						 
+			numMatMenorCalif = j;
 		} else {
 			if (sumCalxMat > menorAcumMat){ // A partir de la segunda materia, comparamos quien tiene el acumulado menor, la materia anterior o la actual
 				menorAcumMat = sumCalxMat; // Si el acumulado actual es menor entonces menorAcumMat se actualiza al nuevo dato menor
@@ -128,7 +128,7 @@ int mesConMasVentas(double pCalifs[][5]){
 		}
 		cout << endl<< "Sumatoria: " << sumCalxMat<<endl;
 	}
-	return numMatMenorCalif;	
+	return numMatMenorCalif;
 }
 
 int sumaVentasTotales(double pCalifs[][5]){
@@ -146,7 +146,7 @@ int sumaVentasTotales(double pCalifs[][5]){
 		cout << endl<< "Sumatoria: " << sumCalxMat<<endl;
 		sumaFinal += sumCalxMat;
 	}
-	return sumaFinal;	
+	return sumaFinal;
 }
 
 int porcentajeDeVenta(double pCalifs[][5]){
@@ -160,7 +160,7 @@ int porcentajeDeVenta(double pCalifs[][5]){
 			sumCalxMat += pCalifs[i][j];
 		}
 		sumaFinal += sumCalxMat;
-	}	
+	}
 	double sumCalxAlum;
 	double mayorAcumCalif;
 	for(int i = 0; i < 4; i ++){
@@ -187,7 +187,7 @@ int menorIgual1000(double pCalifs[][5]){
 			if (pCalifs[i][j] < 1001) {
 				cout << "Mes " << j + 1 << "(" << pCalifs[i][j] << "), ";
 				cuantasVeces++;
-			}	
+			}
 			sumCalxAlum = sumCalxAlum + pCalifs[i][j];
 		}
 		cout << "\n";
