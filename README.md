@@ -30,3 +30,17 @@ g++ $fileName # c++
 ```shell
 start a.exe
 ```
+
+## C
+
+```shell
+gcc hello.c # compile
+./a.out # run
+```
+
+## C++
+
+```shell
+g++ hello.cpp # compile
+./a.out # run
+```
