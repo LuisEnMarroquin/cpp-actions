@@ -1,4 +1,4 @@
-name: Github Action C and C++
+name: Build C and C++
 
 on:
   push:
@@ -11,33 +11,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
-    - name: configure
-      run: mkdir build && cd build && cmake -DCMAKE_CXX_FLAGS="-Werror" ..
-    - name: build
-      run: cmake --build build
-    - name: test
-      run: cd build && ctest
+    - name: install
+      run: apt install gcc g++ make -y
+    - name: build c
+      run: gcc hello.c
+    - name: build c++
+      run: g++ hello.cpp
 
   build-windows:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v1
-    - name: configure
-      run: mkdir build && cd build && cmake ..
-    - name: build
-      run: cmake --build build --config Debug
-    - name: test
-      run: cd build && ctest
-
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v1
-    - name: configure
-      run: ./configure
-    - name: make
-      run: make
-    - name: make check
-      run: make check
-    - name: make distcheck
-      run: make distcheck
+    - name: install choco cmd
+      run: @"%SystemRoot%\System32\WindowsPowerShell\v1.0\powershell.exe" -NoProfile -InputFormat None -ExecutionPolicy Bypass -Command "iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))" && SET "PATH=%PATH%;%ALLUSERSPROFILE%\chocolatey\bin"
+    - name: install choco powershell
+      run: Set-ExecutionPolicy Bypass -Scope Process -Force; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
