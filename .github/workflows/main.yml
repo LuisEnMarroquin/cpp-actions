@@ -17,9 +17,9 @@ jobs:
       run: sh linux.sh
     - name: artifacts
       uses: actions/upload-artifact@v1
-        with:
-          name: linux
-          path: linux
+      with:
+        name: linux
+        path: linux
 
   build-windows:
     runs-on: windows-latest
