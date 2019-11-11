@@ -1,14 +1,17 @@
-# Get the GCC preinstalled image from Docker Hub
+# Docker Hub image
 FROM gcc:latest
 
-# Copy the current folder which contains C++ source code to the Docker image under /usr/src
-COPY . /usr/src/app
-
-# Specify the working directory
+# Set working directory
 WORKDIR /usr/src/app
 
-# Use GCC to compile the source file
-RUN g++ -o Test signo.cpp
+# Copy all to the Docker image
+COPY . ./
 
-# Run the program output from the previous step
-CMD ["./Test"]
+# Compile
+RUN gcc -o Test hello.c
+
+# Run
+RUN ./Test
+
+# Keep container running
+CMD tail -f /dev/null

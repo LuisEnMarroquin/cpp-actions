@@ -1,0 +1,11 @@
+# Files
+*.md
+*.exe
+*.out
+LICENSE
+.gitignore
+Dockerfile
+
+# Folders
+.github/
+.vscode/

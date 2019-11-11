@@ -30,46 +30,55 @@ int main() {
   }
 
   if (login == 1) {
-    printf("Bienvenido\n");
-    printf("1. Depositar\n");
-    printf("2. Retirar\n");
-    printf("3. Transferir\n");
-    printf("4. Consultar saldo\n");
-    // Opcion
-    printf("Eliga una opcion: ");
-    scanf("%i", &opcion);
-    // switch
-    switch (opcion) {
-      case 1:
-        printf("Cuanto deseas depositar: ");
-        scanf("%i", &cantidad);
-        cuenta = cuenta + cantidad;
-        printf("Su saldo de cuenta es: %i", cuenta);
-        break;
-      case 2:
-        printf("Cuanto deseas retirar: ");
-        scanf("%i", &cantidad);
-        cuenta = cuenta - cantidad;
-        printf("Su saldo de cuenta es: %i", cuenta);
-        break;
-      case 3:
-        printf("Cuanto deseas tranferir: ");
-        scanf("%i", &cantidad);
-        printf("A que cuenta deseas transferir: ");
-        scanf("%i", &cuentaTransferencia);
-        cuenta = cuenta - cantidad;
-        printf("Se han transferido %i a la cuenta %i\n", cuenta, cuentaTransferencia);
-        printf("Su saldo de cuenta es: %i", cuenta);
-        break;
-      case 4:
-        printf("Su saldo de cuenta es: %i", cuenta);
-        break;
-      default:
-        printf("Gracias por perder el tiempo en el cajero");
-        break;
+    int next = 1;
+    while (next) {
+      printf("Bienvenido\n");
+      printf("1. Depositar\n");
+      printf("2. Retirar\n");
+      printf("3. Transferir\n");
+      printf("4. Consultar saldo\n");
+      // Opcion
+      printf("Eliga una opcion: ");
+      scanf("%i", &opcion);
+      // switch
+      switch (opcion) {
+        case 1:
+          printf("Cuanto deseas depositar: ");
+          scanf("%i", &cantidad);
+          cuenta = cuenta + cantidad;
+          printf("Su saldo de cuenta es: %i\n", cuenta);
+          break;
+        case 2:
+          printf("Cuanto deseas retirar: ");
+          scanf("%i", &cantidad);
+          cuenta = cuenta - cantidad;
+          printf("Su saldo de cuenta es: %i\n", cuenta);
+          break;
+        case 3:
+          printf("Cuanto deseas tranferir: ");
+          scanf("%i", &cantidad);
+          printf("A que cuenta deseas transferir: ");
+          scanf("%i", &cuentaTransferencia);
+          cuenta = cuenta - cantidad;
+          printf("Se han transferido %i a la cuenta %i\n", cuenta, cuentaTransferencia);
+          printf("Su saldo de cuenta es: %i\n", cuenta);
+          break;
+        case 4:
+          printf("Su saldo de cuenta es: %i\n", cuenta);
+          break;
+        default:
+          printf("Gracias por perder el tiempo en el cajero\n");
+          break;
+      }
+      printf("Desea hacer otra transacción?\n");
+      printf("0. No\n");
+      printf("1. Si\n");
+      scanf("%i", &next);
     }
   }
 
-  sleep(10);
+  printf("Gracias por usar el cajero\n");
+
+  sleep(1);
   return 0;
 }

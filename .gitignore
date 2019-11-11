@@ -1,10 +1,14 @@
-*.exe
-*.backup*
-*.dev
-*.layout
+# Files
 *.o
+*.dev
+*.exe
+*.out
 *.win
+*.backup
+*.layout
 salida.txt
+
+# File managers
 .DS_Store
 .directory
 desktop.ini

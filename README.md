@@ -8,7 +8,7 @@ Use MinGW to install C and C++ compilers
 
 1. Install [MinGW Installation Manager](http://www.mingw.org/wiki/Getting_Started)
 2. Choose install location: `C:\MinGW`
-3. Go to: Edit the system environment variables
+3. Go to: `Edit the system environment variables`
 4. Add to System => Path: `C:\MinGW\bin\`
 
 Open MinGW and install the following packages in `Basic Setup`
@@ -22,7 +22,7 @@ Open MinGW and install the following packages in `Basic Setup`
 Just run the following
 
 ```shell
-sudo apt-get install gcc g++ make -y 
+sudo apt-get install gcc g++ make -y
 ```
 
 ## Docker Setup
@@ -42,6 +42,6 @@ g++ hello.cpp # c++
 
 ## Run
 ```shell
-./a.out # Linux
+./a.out # Linux and MacOS
 start a.exe # Windows
 ```
