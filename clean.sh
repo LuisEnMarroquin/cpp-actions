@@ -1,9 +1,4 @@
-for file in *.out
-  do
-    rm $file
-  done
-
-for file in *.exe
+for file in **/*.out **/*.exe
   do
     rm $file
   done

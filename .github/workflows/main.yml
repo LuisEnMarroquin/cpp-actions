@@ -13,8 +13,6 @@ jobs:
     - uses: actions/checkout@v1
     - name: install
       run: sudo apt install gcc g++ make -y
-    - name: ls
-      run: ls
     - name: build
       run: sh linux.sh
     - name: artifacts
