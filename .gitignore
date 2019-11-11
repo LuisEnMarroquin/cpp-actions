@@ -9,7 +9,8 @@
 salida.txt
 
 # Folders
-artifacts/
+artifacts/*
+!artifacts/.gitkeep
 
 # File managers
 .DS_Store
