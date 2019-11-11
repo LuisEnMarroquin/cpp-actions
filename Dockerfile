@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 COPY . ./
 
 # Compile
-RUN gcc -o Test hello.c
+RUN gcc -o Test.out hello.c
 
 # Run
 RUN ./Test

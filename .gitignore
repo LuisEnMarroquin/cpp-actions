@@ -8,6 +8,12 @@
 *.layout
 salida.txt
 
+# Folders
+linux/
+ubuntu/
+windows/
+artifacts/
+
 # File managers
 .DS_Store
 .directory

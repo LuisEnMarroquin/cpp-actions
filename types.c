@@ -14,7 +14,7 @@ int main() {
   printf("\nint: %i", a);
   printf("\nchar: %c", b);
   printf("\nfloat: %f", c);
-  printf("\ndouble: %d", d);
+  printf("\ndouble: %f", d);
 
   const int SIDE = 10;
 

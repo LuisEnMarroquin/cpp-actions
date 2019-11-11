@@ -7,6 +7,9 @@ LICENSE
 Dockerfile
 
 # Folders
+linux/
+ubuntu/
 .github/
 .vscode/
-actifacts/
+windows/
+artifacts/

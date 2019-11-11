@@ -7,20 +7,23 @@ on:
 
 jobs:
 
-  build-ubuntu:
+  build-linux:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
     - name: install
       run: sudo apt install gcc g++ make -y
-    - name: build c
-      run: gcc hello.c
-    - name: build c++
-      run: g++ hello.cpp
+    - name: build
+      run: sh linux.sh
+    - name: artifacts
+      uses: actions/upload-artifact@v1
+        with:
+          name: linux
+          path: linux
 
   build-windows:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v1
-    - name: ls
-      run: ls
+    - name: build
+      run: sh windows.sh
