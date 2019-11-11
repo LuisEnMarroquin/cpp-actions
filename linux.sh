@@ -1,13 +1,9 @@
-if [[ ! -e linux ]]
-  then mkdir -p linux
-    fi
-
 for file in *.c
   do
     echo $file
     name=${file%.*}
     gcc -o ${name}.out $file
-    mv ${name}.out linux/${name}.out
+    mv ${name}.out artifacts/${name}.out
   done
 
 for file in *.cpp
@@ -15,5 +11,5 @@ for file in *.cpp
     echo $file
     name=${file%.*}
     g++ -o ${name}.out $file
-    mv ${name}.out linux/${name}.out
+    mv ${name}.out artifacts/${name}.out
   done

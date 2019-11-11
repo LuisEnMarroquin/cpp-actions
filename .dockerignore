@@ -1,5 +1,6 @@
 # Files
 *.md
+*.sh
 *.exe
 *.out
 LICENSE
@@ -7,9 +8,6 @@ LICENSE
 Dockerfile
 
 # Folders
-linux/
-ubuntu/
 .github/
 .vscode/
-windows/
 artifacts/

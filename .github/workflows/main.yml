@@ -18,8 +18,8 @@ jobs:
     - name: artifacts
       uses: actions/upload-artifact@v1
       with:
-        name: linux
-        path: linux
+        name: artifacts
+        path: artifacts
 
   build-windows:
     runs-on: windows-latest
