@@ -3,6 +3,7 @@
 *.sh
 *.exe
 *.out
+*.rap
 LICENSE
 .gitignore
 Dockerfile
