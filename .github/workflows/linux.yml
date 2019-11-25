@@ -1,0 +1,25 @@
+name: Build Linux
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: install
+      run: sudo apt install gcc g++ make -y
+    - name: sfml
+      run: sudo apt install libsfml-dev
+    - name: build
+      run: sh compile.sh out
+    - name: gitkeep
+      run: rm artifacts/.gitkeep
+    - name: artifacts
+      uses: actions/upload-artifact@v1
+      with:
+        name: Linux
+        path: artifacts

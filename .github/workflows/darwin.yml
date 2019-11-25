@@ -1,0 +1,21 @@
+name: Build macOS
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build-macos:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: build
+      run: sh compile.sh out
+    - name: gitkeep
+      run: rm artifacts/.gitkeep
+    - name: artifacts
+      uses: actions/upload-artifact@v1
+      with:
+        name: macOS
+        path: artifacts

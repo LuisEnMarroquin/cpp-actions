@@ -1,0 +1,21 @@
+name: Build Windows
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v1
+    - name: build
+      run: sh compile.sh exe
+    - name: gitkeep
+      run: rm artifacts/.gitkeep
+    - name: artifacts
+      uses: actions/upload-artifact@v1
+      with:
+        name: Windows
+        path: artifacts
