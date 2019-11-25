@@ -1,0 +1,17 @@
+# Files
+*.o
+*.dev
+*.exe
+*.out
+*.win
+*.backup
+*.layout
+
+# Folders
+artifacts/*
+!artifacts/.gitkeep
+
+# File managers
+.DS_Store
+.directory
+desktop.ini
